@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# SECURE_SSL_REDIRECT = False
+
 
 # Application definition
 
@@ -40,7 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login_signup',
     'students',
+    'teacher',
 ]
+
+
+
+
 
 JAZZMIN_SETTINGS = {
     "site_title": "My School Admin",
