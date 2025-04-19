@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password, check_password
 from .models import Student
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
 
 # Custom decorator to protect views
 def student_login_required(view_func):
@@ -74,3 +76,6 @@ def dashboard_view(request):
     student_id = request.session.get('student_id')
     student = Student.objects.get(id=student_id)
     return render(request, 'dash.html', {'student': student})
+
+
+

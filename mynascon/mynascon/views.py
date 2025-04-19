@@ -3,9 +3,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-import pusher
-from django.views.decorators.csrf import csrf_exempt
-from django.http import JsonResponse
 
 def signup_view(request):
     if request.method == 'POST':
@@ -54,21 +51,3 @@ def logout_view(request):
 # @login_required(login_url='login')
 def home(request):
     return render(request, 'index.html')
-
-pusher_client = pusher.Pusher(
-  app_id='1977792',
-  key='04413b42c5876c94141b',
-  secret='0a299870c1aeb3b5a5c2',
-  cluster='mt1',
-  ssl=True
-)
-
-@csrf_exempt
-def send_message(request):
-    if request.method == 'POST':
-        message = request.POST.get('message')
-        pusher_client.trigger('my-channel', 'my-event', {'message': message})
-        return JsonResponse({'status': 'Message sent'})
-    
-def chat_view(request):
-    return render(request, 'chat.html')
