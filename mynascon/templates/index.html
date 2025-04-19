@@ -180,6 +180,7 @@
           <p>Start, switch, or advance your career with more than 10,000 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
           <div class="hero-buttons">
             <button class="btn btn-primary">Join For Free</button>
+            
             <button class="btn btn-outline-light">Try EdTech for Business</button>
           </div>
         </div>
@@ -210,6 +211,21 @@
       </section>
       
 </main><!-- /.main -->
+<script src="https://js.pusher.com/8.4.0/pusher.min.js"></script>
+  <script>
+
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('04413b42c5876c94141b', {
+      cluster: 'mt1'
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      alert(JSON.stringify(data));
+    });
+  </script>
 <body>
     
 {% include 'footer.html' %}

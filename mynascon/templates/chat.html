@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pusher Chat</title>
+  <script src="https://js.pusher.com/8.4.0/pusher.min.js"></script>
+</head>
+<body>
+  <h2>Real-Time Chat</h2>
+  <textarea id="chat-log" rows="10" cols="60" readonly></textarea><br>
+  <input type="text" id="message" placeholder="Type your message...">
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    // Pusher setup
+    var pusher = new Pusher('04413b42c5876c94141b', {
+      cluster: 'mt1'
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      document.getElementById('chat-log').value += data.message + '\n';
+    });
+
+    function sendMessage() {
+      const message = document.getElementById('message').value;
+      fetch('/send-message/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'X-CSRFToken': '{{ csrf_token }}'
+        },
+        body: 'message=' + encodeURIComponent(message)
+      });
+      document.getElementById('message').value = '';
+    }
+  </script>
+</body>
+</html>

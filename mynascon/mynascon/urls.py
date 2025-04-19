@@ -29,6 +29,8 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('students/', include('students.urls')),
+    path('send-message/', views.send_message, name='send_message'),
+    path('chat/', views.chat_view, name='chat'),
     path('login/', include('students.urls')),
     path('logout/', views.logout_view, name='logout'),
     path('students/', include('students.urls')),
