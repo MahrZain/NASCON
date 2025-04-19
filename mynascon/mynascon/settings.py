@@ -39,8 +39,23 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login_signup',
-    
+    'students',
 ]
+
+JAZZMIN_SETTINGS = {
+    "site_title": "My School Admin",
+    "welcome_sign": "Welcome to My School",
+    # … any other global Jazzmin settings …
+}
+
+# AUTH_USER_MODEL = 'students.Student'
+# Session will last 2 weeks (in seconds)
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 14  # 14 days = 2 weeks
+
+# Optional: Keep session even if browser is closed
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

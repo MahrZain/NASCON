@@ -28,16 +28,15 @@ urlpatterns = [
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
-    path('signup/', views.signup_view, name='signup'),
-    path('login/', views.login_view, name='login'),
+    path('students/', include('students.urls')),
+    path('login/', include('students.urls')),
     path('logout/', views.logout_view, name='logout'),
     path('teacher/home/', views.teacherHome, name='teacher_home'),
+    path('students/', include('students.urls')),
 ]
+    
+    
 
 
-
-
-
-# urlspatterns :
 
 
