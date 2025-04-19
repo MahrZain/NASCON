@@ -48,6 +48,6 @@ def logout_view(request):
     return redirect('login')
 
 
-@login_required(login_url='login')
-def dashboard_view(request):
-    return render(request, 'dashboard.html')
+# @login_required(login_url='login')
+def home(request):
+    return render(request, 'index.html')
