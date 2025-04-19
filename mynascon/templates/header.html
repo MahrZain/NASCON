@@ -3,5 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nascon</title>
+    <title>Interactive Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding-top: 70px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        header {
+            width: 100%;
+            background-color: rgba(255,255,255,0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #9b59b6;
+        }
+        nav button {
+            background: none;
+            border: none;
+            color: #9b59b6;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 8px 12px;
+            margin-left: 10px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav button:hover {
+            color: #8e44ad;
+            transform: translateY(-3px);
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 320px;
+            margin-top: 30px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #9b59b6;
+        }
+        button.signup-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #9b59b6;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button.signup-btn:hover {
+            background-color: #8e44ad;
+        }
+        .message {
+            text-align: center;
+            margin-top: 15px;
+            color: #27ae60;
+            display: none;
+        }
+    </style>
 </head>
