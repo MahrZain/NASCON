@@ -1,6 +1,159 @@
 {% include 'header.html' %}
 <main class="main">
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Segoe UI', sans-serif;
+          background: linear-gradient(135deg, #71b7e6, #9b59b6);
 
+          color: white;
+        }
+    
+        .hero-section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 80px 5%;
+          flex-wrap: wrap;
+          animation: fadeIn 1s ease-in;
+        }
+    
+        .hero-text {
+          flex: 1 1 500px;
+          max-width: 600px;
+        }
+    
+        .hero-text h1 {
+          font-size: 4.2rem;
+          font-weight: 800;
+          margin-bottom: 25px;
+          color: #fff;
+        }
+    
+        .hero-text p {
+          font-size: 1.2rem;
+          color: #e0e0e0;
+          margin-bottom: 35px;
+          line-height: 1.6;
+        }
+    
+        .hero-buttons .btn {
+          padding: 12px 28px;
+          font-size: 1.05rem;
+          font-weight: 600;
+          margin-right: 15px;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+        }
+    
+        .btn-primary {
+          background-color: #f5ba31;
+          border: none;
+          color: #000;
+        }
+    
+        .btn-primary:hover {
+          background-color: #dfa319;
+          transform: translateY(-2px);
+        }
+    
+        .btn-outline-light {
+          border: 2px solid #fff;
+          color: #fff;
+        }
+    
+        .btn-outline-light:hover {
+          background-color: #fff;
+          color: #000;
+          transform: translateY(-2px);
+        }
+    
+        .hero-image {
+          flex: 1 1 400px;
+          position: relative;
+          max-width: 500px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        .hero-image .circle-letter {
+          font-size: 22rem;
+          color: #ffffff11; /* subtle white overlay */
+          font-weight: 900;
+          position: absolute;
+          z-index: 1;
+          text-align: center;
+        }
+    
+        .hero-image img {
+          max-height: 90%;
+          max-width: 90%;
+          position: relative;
+          z-index: 2;
+          border-radius: 12px;
+        }
+    
+        /* Fade-in animation */
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(40px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+    
+        /* Responsive */
+        @media (max-width: 992px) {
+          .hero-section {
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 60px 20px;
+          }
+    
+          .hero-text h1 {
+            font-size: 3rem;
+          }
+    
+          .hero-image .circle-letter {
+            font-size: 14rem;
+          }
+        }
+    
+        @media (max-width: 576px) {
+          .hero-text h1 {
+            font-size: 2.5rem;
+          }
+    
+          .hero-text p {
+            font-size: 1rem;
+          }
+    
+          .hero-buttons .btn {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+          }
+        }
+      </style>
+    </head>
+    
+    <body>
+    
+      <section class="hero-section">
+        <!-- Text Column -->
+        <div class="hero-text">
+          <h1>Learn without<br>limits</h1>
+          <p>Start, switch, or advance your career with more than 10,000 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary">Join For Free</button>
+            <button class="btn btn-outline-light">Try EdTech for Business</button>
+          </div>
+        </div>
+    
+        <!-- Image Column -->
+        <div class="hero-image">
+          <img src="/mnt/data/32893621-e7d6-4a66-a813-e18f831b4274.png" alt="Student Image" />
+        </div>
+      </section>
 </main><!-- /.main -->
 <body>
     
