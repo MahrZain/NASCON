@@ -165,3 +165,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# settings.py
+HF_TOKEN = "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"
+
+
+JAZZMIN_SETTINGS = {
+    "site_title": "EdTech Portal",
+    "site_header": "MyEdTech Admin",
+    "site_brand":  "EdTech",
+    "welcome_sign": "Welcome to the EdTech Control Panel",
+    # …and many more styling options…
+}
