@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="root">
+        <div class="mainAppWrapper">
+            <div class="mainWebHeader">
+                <div class="LSide">
+                    <div class="logo">
+                        <a href="/">
+                            <p>EdTech</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="RSide">
+                    <div class="List">
+                        <div class="Item NotificationBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1">
+                                <path d="M28.3 22.247c-1.167-1.419-2.765-3.429-2.765-5.48v-6.53c0-5.625-4.207-10.202-9.584-10.202-5.378 0-9.552 4.577-9.552 10.202v6.53c0 2.016-1.734 3.921-2.833 5.4-0.989 1.328-1.77 2.378-1.242 3.427 0.463 0.923 1.624 1.041 2.583 1.041h5.73c0.002 2.944 2.389 5.331 5.333 5.331s5.333-2.386 5.334-5.331h5.864c0.61 0 2.036 0 2.527-1.038 0.495-1.050-0.297-2.016-1.395-3.351zM15.969 29.871c-1.788 0-3.239-1.448-3.241-3.235h6.482c-0.003 1.787-1.452 3.235-3.241 3.235zM27.168 24.506h-22.262c-0.153 0-0.281-0.005-0.386-0.012 0.206-0.319 0.508-0.727 0.755-1.058 1.218-1.637 3.255-3.949 3.255-6.669v-6.53c0-4.452 3.22-8.073 7.423-8.073s7.455 3.622 7.455 8.073v6.53c0 2.813 1.878 5.164 3.249 6.832 0.231 0.281 0.507 0.617 0.722 0.905-0.064 0.002-0.134 0.003-0.209 0.003z"/>
+                            </svg>
+                        </div>
+                        <div class="Item UserBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon">
+                                <defs>
+                                  <style>
+                                    .cls-1 {
+                                      fill: none;
+                                    }
+                                  </style>
+                                </defs>
+                                <path id="_inner-path_" data-name="&lt;inner-path&gt;" class="cls-1" d="M8.0071,24.93A4.9958,4.9958,0,0,1,13,20h6a4.9959,4.9959,0,0,1,4.9929,4.93,11.94,11.94,0,0,1-15.9858,0ZM20.5,12.5A4.5,4.5,0,1,1,16,8,4.5,4.5,0,0,1,20.5,12.5Z"/>
+                                <path d="M26.7489,24.93A13.9893,13.9893,0,1,0,2,16a13.899,13.899,0,0,0,3.2511,8.93l-.02.0166c.07.0845.15.1567.2222.2392.09.1036.1864.2.28.3008.28.3033.5674.5952.87.87.0915.0831.1864.1612.28.2417.32.2759.6484.5372.99.7813.0441.0312.0832.0693.1276.1006v-.0127a13.9011,13.9011,0,0,0,16,0V27.48c.0444-.0313.0835-.0694.1276-.1006.3412-.2441.67-.5054.99-.7813.0936-.08.1885-.1586.28-.2417.3025-.2749.59-.5668.87-.87.0933-.1006.1894-.1972.28-.3008.0719-.0825.1522-.1547.2222-.2392ZM16,8a4.5,4.5,0,1,1-4.5,4.5A4.5,4.5,0,0,1,16,8ZM8.0071,24.93A4.9957,4.9957,0,0,1,13,20h6a4.9958,4.9958,0,0,1,4.9929,4.93,11.94,11.94,0,0,1-15.9858,0Z"/>
+                                <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
+                              </svg>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="mainAppBodyWrapper">
+                <div class="mainAppSideBar">
+                    <div class="OptionsList">
+                        <div class="ItemC active">
+                            <a href="/">
+                                <div class="Item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 18 18" mirror-in-rtl="true">
+                                        <path fill="#494c4e" d="M6 18H1a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1zM17 18h-5a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1zM6 7H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1zM17.708 5.24l-3.535 3.535a1 1 0 0 1-1.414 0L9.224 5.24a1 1 0 0 1 0-1.413L12.76.292a1 1 0 0 1 1.414 0l3.535 3.535a1 1 0 0 1-.002 1.414z"/>
+                                      </svg>
+                                    <p>Browse Courses</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ItemC">
+                            <a href="/">
+                                <div class="Item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 -8.14 62.451 62.451">
+                                        <g id="Group_35" data-name="Group 35" transform="translate(-782.964 -1356.609)">
+                                          <path id="Path_92" data-name="Path 92" d="M798.022,1369.359v23.226h.034c.353,4.555,7.685,8.2,16.7,8.2s16.347-3.641,16.7-8.2h.033v-23.226Z" fill="#d1d3d4" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                          <path id="Path_93" data-name="Path 93" d="M843.415,1373.207l-29.225,14.6-29.227-14.6,29.227-14.6Z" fill="#ffffff" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                          <line id="Line_40" data-name="Line 40" y1="19.235" transform="translate(784.964 1374.361)" fill="#ffffff" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                        </g>
+                                      </svg>
+                                    <p>Enrolled Courses</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ItemC">
+                            <a href="/">
+                                <div class="Item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z" stroke="#1C274C" stroke-width="1.5"/>
+                                        </svg>
+                                    <p>Chats</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainAppBody">
+                    <div class="coursesSearchPage" style="display: none;">
+                        <div class="section1">
+                            <div class="content">
+                                <div class="headingMain">
+                                    Your Learning Adventure Starts Here
+                                </div>
+                                <div class="SearchWrapper">
+                                    <div class="InputContainer">
+                                        <input type="text" placeholder="Search Here">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                            <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section coursesListPage">
+                            <div class="Content">
+                                <div class="headerMain">
+                                    <div class="heading">
+                                        Recent Courses
+                                    </div>
+                                    <div class="Buttons">
+                                        <!-- <button class="back">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                <path d="M15 6L9 12L15 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button> -->
+                                        <button class="next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                <path d="M9 6L15 12L9 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="cList">
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="PriceTag">
+                                                    <p>Rs. 1200</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="PriceTag">
+                                                    <p>Rs. 1200</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="PriceTag">
+                                                    <p>Rs. 1200</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="PriceTag">
+                                                    <p>Rs. 1200</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coursesSearchPage categoryFocued" style="display: none;">
+                        <div class="section1">
+                            <div class="content">
+                                <div class="headingMain">
+                                    Your Learning Adventure Starts Here
+                                </div>
+                                <div class="SearchWrapper">
+                                    <div class="InputContainer">
+                                        <input type="text" placeholder="Search Here">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                            <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section coursesListPage">
+                            <div class="Content">
+                                <div class="headerMain">
+                                    <div class="heading">
+                                        Recent Courses
+                                    </div>
+                                </div>
+                                <div class="cList">
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="PriceTag">
+                                                    <p>Rs. 1200</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="PriceTag">
+                                                    <p>Rs. 1200</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="PriceTag">
+                                                    <p>Rs. 1200</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="PriceTag">
+                                                    <p>Rs. 1200</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section courseDetailPage" style="display: none;">
+                        <div class="course-container">
+                            <img class="course-banner" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="Course Image">
+                        
+                            <div class="course-content">
+                                <h1 class="course-title">Mastering Web Development</h1>
+                        
+                                <div class="tutor-info">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Tutor">
+                                <div>
+                                    <strong>John Doe</strong><br>
+                                    Senior Web Instructor
+                                </div>
+                                </div>
+                        
+                                <div class="rating">⭐ 4.7 (2,354 reviews)</div>
+                        
+                                <p class="description">
+                                Learn the complete web development process, from HTML, CSS, and JavaScript to building interactive websites using modern frameworks. Perfect for beginners and intermediates alike, this course guides you through real-world projects and builds your confidence step-by-step.
+                                </p>
+                        
+                                <div class="learn-list">
+                                <h3>What you’ll learn:</h3>
+                                <ul>
+                                    <li>HTML, CSS & JavaScript foundations</li>
+                                    <li>Building responsive websites</li>
+                                    <li>DOM manipulation & interactivity</li>
+                                    <li>Web hosting and deployment</li>
+                                    <li>Project-based learning</li>
+                                </ul>
+                                </div>
+                        
+                                <a href="#" class="enroll-btn">Enroll Now</a>
+                            </div>
+                            </div>
+                            <div class="review-container">
+                            <div class="review-header">
+                                <h1>Course Reviews</h1>
+                                <div class="rating-summary">⭐ 4.7 average rating (1,254 reviews)</div>
+                            </div>
+                        
+                            <div class="review-card">
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <div class="review-author">Alice Johnson</div>
+                                <div class="review-date">2 days ago</div>
+                                <div class="review-text">
+                                This course exceeded my expectations! The explanations were clear, and I loved the hands-on projects. Totally worth it.
+                                </div>
+                            </div>
+                        
+                            <div class="review-card">
+                                <div class="review-stars">⭐⭐⭐⭐</div>
+                                <div class="review-author">Mark Lee</div>
+                                <div class="review-date">1 week ago</div>
+                                <div class="review-text">
+                                Great content and easy to follow. I just wish there were more examples on advanced topics. Still, highly recommended!
+                                </div>
+                            </div>
+                        
+                            <div class="review-card">
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <div class="review-author">Sana Tariq</div>
+                                <div class="review-date">3 weeks ago</div>
+                                <div class="review-text">
+                                I started as a beginner, and now I can build full websites. The instructor was amazing. Thank you!
+                                </div>
+                            </div>
+                        
+                            <div class="review-card">
+                                <div class="review-stars">⭐⭐⭐</div>
+                                <div class="review-author">David Kim</div>
+                                <div class="review-date">1 month ago</div>
+                                <div class="review-text">
+                                It's a good course but felt a bit rushed in the last few modules. Some topics need more depth.
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="section chatPage" style="display: none;">
+                                                
+                        <div class="chat-app">
+                            <!-- Left Side Chat List -->
+                            <div class="chat-list">
+                            <div class="chat-item">
+                                <img class="chat-avatar" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Ali">
+                                <div class="chat-details">
+                                <strong>Ali Khan</strong>
+                                <span>Hey, got the files?</span>
+                                </div>
+                                <div class="notification-dot"></div>
+                            </div>
+
+                            <div class="chat-item">
+                                <img class="chat-avatar" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sara">
+                                <div class="chat-details">
+                                <strong>Sara Malik</strong>
+                                <span>Meeting is at 4PM</span>
+                                </div>
+                            </div>
+
+                            <div class="chat-item">
+                                <img class="chat-avatar" src="https://randomuser.me/api/portraits/men/21.jpg" alt="Teacher">
+                                <div class="chat-details">
+                                <strong>Teacher</strong>
+                                <span>Don't forget assignment</span>
+                                </div>
+                                <div class="notification-dot"></div>
+                            </div>
+                            </div>
+
+                            <!-- Right Side Chat Window -->
+                            <div class="chat-window">
+                            <div class="chat-header">Chat with Ali Khan</div>
+
+                            <div class="chat-messages">
+                                <div class="message sender">Hey, did you complete the assignment?</div>
+                                <div class="message own">Yes, I submitted it last night.</div>
+                                <div class="message sender">Great! Can you send me your notes too?</div>
+                                <div class="message own">Sure, attaching them now.</div>
+                            </div>
+
+                            <!-- Message Input Area -->
+                            <div class="chat-input">
+                                <label class="attach-btn" for="file">&#128206;</label>
+                                <input type="file" id="file">
+                                <input type="text" placeholder="Type a message...">
+                                <button class="send-btn">Send</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coursesSearchPage categoryFocued" style="display: none;">
+                        <div class="section coursesListPage">
+                            <div class="Content">
+                                <div class="headerMain">
+                                    <div class="heading">
+                                        Enrolled Courses
+                                    </div>
+                                </div>
+                                <div class="cList">
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="ProgressBar">
+                                                    <p class="h">Progress</p>
+                                                    <div class="Progress"></div>
+                                                    <p class="ps">100% Completed</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="ProgressBar">
+                                                    <p class="h">Progress</p>
+                                                    <div class="Progress"></div>
+                                                    <p class="ps">100% Completed</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="ProgressBar">
+                                                    <p class="h">Progress</p>
+                                                    <div class="Progress"></div>
+                                                    <p class="ps">100% Completed</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ItemC">
+                                        <a href="#">
+                                            <div class="Item">
+                                                <div class="ThumbImage">
+                                                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2C%20compress%2C%20enhance&dpr=2&w=320&h=180&q=50&fit=crop" alt="">
+                                                </div>
+                                                <div class="Title">
+                                                    Introduction to Wordpress Development
+                                                </div>
+                                                <div class="InfoRow">
+                                                    <div class="Tutor">
+                                                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png?auto=format%2Ccompress&dpr=3&w=24&h=24" alt="">
+                                                        <p>Abdul Haseeb</p>
+                                                    </div>
+                                                    <div class="Rating">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#1C274C"/>
+                                                            </svg>
+                                                        <p>4.5</p>
+                                                    </div>
+                                                </div>
+                                                <div class="ProgressBar">
+                                                    <p class="h">Progress</p>
+                                                    <div class="Progress"></div>
+                                                    <p class="ps">100% Completed</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courseViewPage">
+                        <div class="watch-page">
+                            <!-- Sidebar: Lecture List -->
+                            <div class="lecture-sidebar">
+                              <div class="lecture-title">Course Lectures</div>
+                              <div class="lecture-item"><span>1. Introduction</span> <span class="status">✅</span></div>
+                              <div class="lecture-item"><span>2. HTML Basics</span> <span class="status">✅</span></div>
+                              <div class="lecture-item"><span>3. CSS Fundamentals</span> <span class="status">▶️</span></div>
+                              <div class="lecture-item"><span>4. Responsive Design</span> <span class="status">🔒</span></div>
+                              <div class="lecture-item"><span>5. JavaScript Intro</span> <span class="status">🔒</span></div>
+                            </div>
+                        
+                            <!-- Main Content: Video + Details -->
+                            <div class="main-content">
+                              <div class="video-player">
+                                <iframe src="https://www.youtube.com/embed/Zi_XLOBDo_Y" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                        
+                              <div class="lecture-info">
+                                <h2>CSS Fundamentals</h2>
+                                <p>
+                                  In this lesson, you’ll learn the foundations of CSS including selectors, properties, values, and how to style elements effectively. We’ll also cover internal and external stylesheets.
+                                </p>
+                              </div>
+                        
+                              <div class="tutor-section">
+                                <div class="tutor-info">
+                                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Tutor">
+                                  <div>
+                                    <strong>John Developer</strong><br>
+                                    Frontend Instructor
+                                  </div>
+                                </div>
+                                <button class="message-btn">Message Tutor</button>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
