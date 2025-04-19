@@ -60,3 +60,6 @@ def home(request):
 
 def teacherHome(request):
     return render(request, 'teacher/home.html')
+
+def studentHome(request):
+    return render(request, 'student/dash.html')
