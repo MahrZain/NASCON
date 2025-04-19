@@ -788,3 +788,129 @@ textarea:focus {
       gap: 10px;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+.mainAppWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainWebHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mainAppSideBar {
+  width: 240px;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+.mainAppBodyWrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+.mainAppBody {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.mainAppWrapper .mainAppBodyWrapper .mainAppSideBar .OptionsList .ItemC .Item p{
+  margin-bottom: 0px !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mainAppBodyWrapper {
+      flex-direction: column;
+  }
+
+  .mainAppSideBar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #e0e0e0;
+  }
+
+  .mainWebHeader {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .RSide .List {
+      justify-content: flex-start !important;
+      gap: 10px;
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mainAppBody {
+      padding: 15px;
+  }
+
+  .mainAppSideBar .Item {
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .mainWebHeader {
+      padding: 10px 15px;
+  }
+
+  .mainAppSideBar p,
+  .mainAppBody h4 {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 300px) {
+  .mainWebHeader,
+  .mainAppSideBar,
+  .mainAppBody {
+      padding: 10px !important;
+  }
+
+  .mainAppSideBar p {
+      font-size: 14px;
+  }
+
+  .mainAppBody h4 {
+      font-size: 15px;
+  }
+
+  .btn,
+  .offcanvas-body .btn {
+      font-size: 14px;
+  }
+
+  .offcanvas-body p {
+      font-size: 14px;
+  }
+}
