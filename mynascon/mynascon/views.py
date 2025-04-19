@@ -51,3 +51,5 @@ def logout_view(request):
 # @login_required(login_url='login')
 def home(request):
     return render(request, 'index.html')
+def teacherHome(request):
+    return render(request, 'teacher/home.html')
