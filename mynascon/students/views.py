@@ -1,41 +1,55 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .models import Student
-from django.contrib.auth import get_user_model
-
-User = get_user_model()
 
 def signup_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         email = request.POST.get('email')
-        password = request.POST.get('password')
+        password1 = request.POST.get('password1')
+        password2 = request.POST.get('password2')
 
-        if User.objects.filter(username=username).exists():
+        if password1 != password2:
+            messages.error(request, 'Passwords do not match')
+        elif Student.objects.filter(username=username).exists():
             messages.error(request, 'Username already taken')
         else:
-            user = User.objects.create_user(username=username, email=email, password=password)
-            login(request, user)
+            student = Student.objects.create(username=username, email=email, password=password1)
+            request.session['student_id'] = student.id
             return redirect('students:dashboard')
     return render(request, 'signup.html')
+
+
 
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
+        print('Received:', username, password)
 
-        if user is not None:
-            login(request, user)
+        try:
+            student = Student.objects.get(username=username, password=password)
+            request.session['student_id'] = student.id
+            print('✅ Valid credentials')
             return redirect('students:dashboard')
-        else:
-            messages.error(request, 'Invalid credentials')
+        except Student.DoesNotExist:
+            print('❌ Invalid credentials')
+            messages.error(request, 'Invalid username or password')
+    else:
+        print('Rendering login page')
+
     return render(request, 'login.html')
 
+
 def logout_view(request):
-    logout(request)
+    request.session.flush()
     return redirect('students:login')
 
+
 def dashboard_view(request):
-    return render(request, 'dash.html')
+    student_id = request.session.get('student_id')
+    if student_id:
+        student = Student.objects.get(id=student_id)
+        return render(request, 'dash.html', {'student': student})
+    else:
+        return redirect('students:login')

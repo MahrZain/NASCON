@@ -48,7 +48,7 @@ JAZZMIN_SETTINGS = {
     # … any other global Jazzmin settings …
 }
 
-AUTH_USER_MODEL = 'students.Student'
+# AUTH_USER_MODEL = 'students.Student'
 
 
 MIDDLEWARE = [
