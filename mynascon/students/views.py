@@ -51,10 +51,13 @@ def login_view(request):
             if check_password(password, student.password):
                 request.session['student_id'] = student.id
                 messages.success(request, f'Welcome back, {student.username}!')
+                print('Login successful')
                 return redirect('students:dashboard')
             else:
+                print('Incorrect password')
                 messages.error(request, 'Incorrect password')
         except Student.DoesNotExist:
+            print('User does not exist')
             messages.error(request, 'User does not exist')
 
     return render(request, 'login.html')
