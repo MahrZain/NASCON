@@ -1,0 +1,790 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+button {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: #000
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 0;
+}
+
+.mainAppWrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.mainAppWrapper .mainWebHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 75px;
+    border-bottom: 1px solid silver;
+    align-items: center;
+    padding: 0 20px;
+}
+.mainAppWrapper .mainWebHeader .LSide .logo{
+    font-size: 35px;
+    font-weight: 600;
+}
+.mainAppWrapper .mainWebHeader .RSide .List{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.mainAppWrapper .mainWebHeader .RSide .List .NotificationBtn{
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 50%;
+    /* border: 1px solid silver; */
+}
+.mainAppWrapper .mainWebHeader .RSide .List .UserBtn{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.mainAppWrapper .mainWebHeader .RSide .List .Item svg{
+    width: auto;
+    height: 100%;
+}
+.mainAppWrapper .mainAppBodyWrapper{
+    width: 100vw;
+    display: flex;
+    height: calc(100vh - 75px);
+}
+.mainAppWrapper .mainAppBodyWrapper .mainAppSideBar{
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid silver;
+    padding: 15px;
+}
+.mainAppWrapper .mainAppBodyWrapper .mainAppSideBar .OptionsList .ItemC{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.mainAppWrapper .mainAppBodyWrapper .mainAppSideBar .OptionsList .ItemC.active .Item{
+    
+    background: #8e44ad30;
+}
+.mainAppWrapper .mainAppBodyWrapper .mainAppSideBar .OptionsList .ItemC .Item{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid silver; */
+    border-radius: 10px;
+    padding: 0 10px;
+}
+.mainAppWrapper .mainAppBodyWrapper .mainAppSideBar .OptionsList .ItemC .Item svg{
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+.mainAppWrapper .mainAppBody{
+    overflow: auto;
+    /* padding: 20px; */
+    width: calc( 100vw - 300px );
+}
+.coursesSearchPage .section1{
+    padding: 5%;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.coursesSearchPage .section1 .content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.coursesSearchPage .section1 .headingMain{
+    text-align: center;
+    font-size: 300%;
+    font-weight: 700;
+    color: #fff;
+    max-width: 800px;
+}
+.coursesSearchPage .section1 .SearchWrapper{
+    width: 100%;
+    max-width: 800px;
+    /* background: #000; */
+    margin-top: 5%;
+}
+.coursesSearchPage .section1 .SearchWrapper .InputContainer{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.coursesSearchPage .section1 .SearchWrapper .InputContainer input{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid silver;
+    padding: 0 50px 0 15px;
+}
+.coursesSearchPage .section1 .SearchWrapper .InputContainer svg{
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+}
+.coursesSearchPage .section.coursesListPage{
+    padding: 20px;
+}
+.coursesSearchPage .section.coursesListPage .headerMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.coursesSearchPage .section.coursesListPage .headerMain .heading{
+    font-size: 150%;
+}
+.coursesSearchPage .section.coursesListPage .headerMain .Buttons{
+    display: flex;
+    column-gap: 15px;
+}
+.coursesSearchPage .section.coursesListPage .headerMain .Buttons button{
+    width: 40px;
+    height: 40px;
+    border: 1px solid silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border-radius: 10px;
+}
+.coursesSearchPage .section.coursesListPage .headerMain .Buttons button svg{
+    width: auto;
+    height: 100%;
+}
+.coursesSearchPage .section.coursesListPage .cList{
+    display: flex;
+    margin-top: 10px;
+    column-gap: 5%;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC{
+    width: 25%;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item{
+    border: 1px solid silver;
+    padding: 10px;
+    border-radius: 10px;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .ThumbImage img{
+    width: 100%;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .Title{
+    font-size: 115%;
+    font-weight: 600;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .InfoRow{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .InfoRow .Tutor {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .InfoRow .Tutor img{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .InfoRow .Rating{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .InfoRow .Rating svg{
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .PriceTag{
+    font-weight: 600;
+    margin: 5px 0;
+    color: red;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .ProgressBar .h{
+    font-weight: 600;
+    font-size: 115%;
+    margin-top: 10px;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .ProgressBar .Progress{
+    width: 50%;
+    height: 5px;
+    border-radius: 20px;
+    background: #9b59b6;
+    margin: 5px 0;
+}
+.coursesSearchPage .section.coursesListPage .cList .ItemC .Item .ProgressBar .ps{
+    font-size: 80%;
+}
+.categoryFocued .section.coursesListPage .headerMain .heading{
+    font-size: 250%;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+.course-container {
+    /* max-width: 900px; */
+    margin: auto;
+    background-color: #fff;
+    border-radius: 15px;
+    /* box-shadow: 0 5px 20px rgba(0,0,0,0.1); */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  /* .course-container:hover {
+    transform: translateY(-5px); */
+  /* } */
+
+  .course-banner {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: auto;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+
+    /* object-fit: cover; */
+  }
+
+  .course-content {
+    padding: 25px;
+  }
+
+  .course-title {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+
+  .tutor-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .tutor-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  .tutor-info div {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .rating {
+    margin: 10px 0;
+    color: #f39c12;
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .learn-list {
+    background-color: #ecf0f1;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+
+  .learn-list h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+
+  .learn-list ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .learn-list ul li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: green;
+  }
+
+  .learn-list ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .enroll-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+
+  .enroll-btn:hover {
+    background-color: #2980b9;
+  }
+
+  @media (max-width: 600px) {
+    .course-title {
+      font-size: 1.5rem;
+    }
+    .course-content {
+      padding: 15px;
+    }
+  }
+
+
+
+
+
+
+  .review-container {
+    /* max-width: 800px; */
+    margin: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+  }
+
+  .review-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .review-header h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+
+  .rating-summary {
+    font-size: 1.2rem;
+    color: #f39c12;
+  }
+
+  .review-card {
+    background-color: #f9f9f9;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .review-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .review-stars {
+    color: #f1c40f;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .review-author {
+    font-weight: bold;
+    color: #34495e;
+  }
+
+  .review-date {
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  .review-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    .review-card {
+      padding: 15px;
+    }
+
+    .review-header h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .section.chatPage{
+    height: 100%;
+  }
+  .chat-app {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* LEFT SIDE - CHAT LIST */
+  .chat-list {
+    width: 30%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .chat-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+  }
+
+  .chat-item:hover {
+    background-color: #34495e;
+  }
+
+  .chat-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+  }
+
+  .chat-details {
+    flex: 1;
+  }
+
+  .chat-details strong {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .chat-details span {
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+
+  .notification-dot {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+  }
+
+  /* RIGHT SIDE - CHAT WINDOW */
+  .chat-window {
+    flex: 1;
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .chat-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+
+  .message {
+    margin-bottom: 15px;
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    line-height: 1.4;
+    position: relative;
+    word-wrap: break-word;
+  }
+
+  .message.sender {
+    background-color: #ecf0f1;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+  }
+
+  .message.own {
+    background-color: #3498db;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+  }
+
+  /* BOTTOM MESSAGE BAR */
+  .chat-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .chat-input input[type="text"] {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.2s;
+  }
+
+  .chat-input input[type="text"]:focus {
+    border-color: #3498db;
+  }
+
+  .chat-input input[type="file"] {
+    display: none;
+  }
+
+  .attach-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #3498db;
+  }
+
+  .send-btn {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .send-btn:hover {
+    background-color: #2980b9;
+  }
+
+  @media (max-width: 768px) {
+    .chat-app {
+      flex-direction: column;
+    }
+
+    .chat-list {
+      width: 100%;
+      height: 220px;
+    }
+
+    .chat-window {
+      height: calc(100vh - 220px);
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+.courseViewPage{
+    height: 100%;
+}
+  .watch-page {
+    display: flex;
+    height: 100%;
+  }
+
+  /* Left Sidebar: Lectures */
+  .lecture-sidebar {
+    width: 300px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .lecture-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .lecture-item {
+    background-color: #34495e;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .lecture-item:hover {
+    background-color: #3d566e;
+  }
+
+  .lecture-item span {
+    font-size: 0.95rem;
+  }
+
+  .status {
+    font-size: 1.2rem;
+  }
+
+  /* Right Main Content */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video-player {
+    background: #000;
+    width: 100%;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  .video-player iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .lecture-info {
+    margin-bottom: 20px;
+  }
+
+  .lecture-info h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+
+  .lecture-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .tutor-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    margin-top: auto;
+  }
+
+  .tutor-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .tutor-info img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  .tutor-info div {
+    font-size: 1rem;
+  }
+
+  .message-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .message-btn:hover {
+    background-color: #2980b9;
+  }
+
+  @media (max-width: 768px) {
+    .watch-page {
+      flex-direction: column;
+    }
+
+    .lecture-sidebar {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      overflow-x: auto;
+    }
+
+    .main-content {
+      padding: 15px;
+    }
+
+    .tutor-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }

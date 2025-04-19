@@ -11,17 +11,23 @@
       <h3 class="text-center mb-4">Login to Your Account</h3>
       <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
-        <input type="text" class="form-control mb-3" id="username" placeholder="Username" required />
-        <input type="password" class="form-control mb-3" id="password" placeholder="Password" required />
-        <button type="submit" class="btn btn-main w-100" onclick="login()">Login</button>
-        <div class="text-success text-center mt-3 d-none" id="message">Login successful!</div>
+        <input type="text" name="username" class="form-control mb-3" placeholder="Username" required />
+        <input type="password" name="password" class="form-control mb-3" placeholder="Password" required />
+        <button type="submit" class="btn login-btn btn-main w-100">Login</button>
       </form>
+      {% if messages %}
+        <div class="text-center mt-3">
+          {% for message in messages %}
+            <div class="text-danger">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
       <div class="text-center mt-3">
         <a href="{% url 'signup' %}">Don't have an account? Sign up</a>
       </div>
     </div>
   </div>
-    
+  
     
        
 </main><!-- /.main -->

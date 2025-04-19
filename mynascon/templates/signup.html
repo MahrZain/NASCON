@@ -4,24 +4,30 @@
         
     
     
-        <div class="container d-flex justify-content-center">
-            <div class="signup-container">
-                <h3 class="text-center mb-4">Create an Account</h3>
-                <form method="post" action="{% url 'signup' %}">
-                    {% csrf_token %}
-                    <input type="text" name="username" class="form-control mb-3" id="username" placeholder="Username" required>
-                    <input type="email" name="email" class="form-control mb-3" id="email" placeholder="Email" required>
-                    <input type="password" name="password1" class="form-control mb-3" id="password1" placeholder="Password" required>
-                    <input type="password" name="password2" class="form-control mb-3" id="password2" placeholder="Confirm Password" required>
-                    <button type="submit" class="btn signup-btn w-100">Sign Up</button>
-                    <div class="message" id="message"></div>
-                </form>
-                <div class="text-center mt-3">
-                    <a href="{% url 'signup' %}">Don't have an account? Sign Up</a>
-                </div>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="signup-container mt-5">
+          <h3 class="text-center mb-4">Create an Account</h3>
+          <form method="post" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <input type="text" name="username" class="form-control mb-3" placeholder="Username" required />
+            <input type="email" name="email" class="form-control mb-3" placeholder="Email" required />
+            <input type="password" name="password1" class="form-control mb-3" placeholder="Password" required />
+            <input type="password" name="password2" class="form-control mb-3" placeholder="Confirm Password" required />
+            <button type="submit" class="btn signup-btn btn-main w-100">Sign Up</button>
+          </form>
+          {% if messages %}
+            <div class="text-center mt-3">
+              {% for message in messages %}
+                <div class="text-danger">{{ message }}</div>
+              {% endfor %}
             </div>
+          {% endif %}
+          <div class="text-center mt-3">
+            <a href="{% url 'login' %}">Already have an account? Login</a>
+          </div>
         </div>
-    
+      </div>
+      
     
        
 </main><!-- /.main -->
