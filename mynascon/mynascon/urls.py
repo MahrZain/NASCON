@@ -40,7 +40,3 @@ urlpatterns = [
 # urlspatterns :
 
 
-
-urlpatterns = [
-
-]

@@ -1,95 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Signup Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #71b7e6, #9b59b6);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
+            min-height: 100vh;
             padding-top: 70px;
-            height: 100vh;
-            box-sizing: border-box;
         }
+
         header {
-            width: 100%;
-            background-color: rgba(255,255,255,0.9);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: fixed;
-            top: 0;
-            z-index: 1000;
+            padding: 10px 20px;
         }
+
         .logo {
-            font-size: 24px;
-            font-weight: bold;
             color: #9b59b6;
+            font-weight: bold;
+            font-size: 24px;
         }
+
         nav button {
             background: none;
             border: none;
             color: #9b59b6;
             font-weight: bold;
-            cursor: pointer;
-            padding: 8px 12px;
-            margin-left: 10px;
-            transition: color 0.3s, transform 0.3s;
+            transition: transform 0.3s, color 0.3s;
         }
+
         nav button:hover {
             color: #8e44ad;
             transform: translateY(-3px);
         }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            width: 320px;
-            margin-top: 30px;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            outline: none;
-            transition: border-color 0.3s;
-        }
+
+        .signup-container, .login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+}
         input:focus {
-            border-color: #9b59b6;
+            border-color: #9b59b6 !important;
+            box-shadow: none !important;
         }
-        button.signup-btn {
-            width: 100%;
-            padding: 10px;
+
+        .signup-btn {
             background-color: #9b59b6;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            color: white;
+            transition: 0.3s;
         }
-        button.signup-btn:hover {
+
+        .signup-btn:hover {
             background-color: #8e44ad;
         }
+
         .message {
-            text-align: center;
-            margin-top: 15px;
             color: #27ae60;
             display: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Custom Media Queries for responsiveness */
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 20px;
+            }
+            nav button {
+                font-size: 14px;
+                margin: 3px;
+                padding: 5px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .signup-container {
+                padding: 20px;
+                max-width: 90%;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 8px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 18px;
+            }
+            nav button {
+                font-size: 13px;
+                padding: 3px 5px;
+            }
+            .signup-container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .logo {
+                font-size: 16px;
+            }
+            nav button {
+                font-size: 12px;
+                padding: 2px 3px;
+            }
         }
     </style>
 </head>
+    <!-- Header -->
+    <header class="d-flex justify-content-between align-items-center fixed-top">
+        <div class="logo">EdTech</div>
+        <nav>
+            <button>Home</button>
+            <button>About</button>
+            <button>Services</button>
+            <button>Contact</button>
+            <button>Login</button>
+        </nav>
+    </header>
