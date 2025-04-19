@@ -3,10 +3,11 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from students.models import Student
 
 def signup_view(request):
-    if request.user.is_authenticated:
-        return redirect('home')  # Redirect if already logged in
+    if request.session.get('student_id'):
+        return redirect('student_home')
 
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -18,11 +19,15 @@ def signup_view(request):
             messages.error(request, "Passwords do not match.")
             return redirect('signup')
 
-        if User.objects.filter(username=username).exists():
+        if Student.objects.filter(username=username).exists():
             messages.error(request, "Username already taken.")
             return redirect('signup')
 
-        user = User.objects.create_user(username=username, email=email, password=password1)
+        if Student.objects.filter(email=email).exists():
+            messages.error(request, "Email already in use.")
+            return redirect('signup')
+
+        Student.objects.create(username=username, email=email, password=password1)
         messages.success(request, "Account created successfully. Please log in.")
         return redirect('login')
 
@@ -30,19 +35,18 @@ def signup_view(request):
 
 
 def login_view(request):
-    if request.user.is_authenticated:
-        return redirect('home')  # Redirect if already logged in
+    if request.session.get('student_id'):
+        return redirect('student_home')
 
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        user = authenticate(request, username=username, password=password)
-
-        if user is not None:
-            login(request, user)
-            return redirect('home')  # or 'dashboard'
-        else:
+        try:
+            student = Student.objects.get(username=username, password=password)
+            request.session['student_id'] = student.id
+            return redirect('student_home')
+        except Student.DoesNotExist:
             messages.error(request, "Invalid username or password.")
             return redirect('login')
 
@@ -50,7 +54,7 @@ def login_view(request):
 
 
 def logout_view(request):
-    logout(request)
+    request.session.flush()
     return redirect('login')
 
 
@@ -61,5 +65,11 @@ def home(request):
 def teacherHome(request):
     return render(request, 'teacher/home.html')
 
+
 def studentHome(request):
-    return render(request, 'student/dash.html')
+    student_id = request.session.get('student_id')
+    if not student_id:
+        return redirect('login')
+
+    student = Student.objects.get(id=student_id)
+    return render(request, 'student/dash.html', {'student': student})
