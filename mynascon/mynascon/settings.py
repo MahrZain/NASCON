@@ -45,15 +45,7 @@ INSTALLED_APPS = [
     'teacher',
 ]
 
-JAZZMIN_SETTINGS = {
-    # … your other Jazzmin settings …
-    "custom_js": [
-        # 1) Tawk embed (your snippet’s URL)
-        "https://embed.tawk.to/675d1b0949e2fd8dfef7a010/1if1r37v2",
-        # 2) Your message‑hook
-        "admin/js/tawk_hook.js",
-    ],
-}
+
 
 
 
