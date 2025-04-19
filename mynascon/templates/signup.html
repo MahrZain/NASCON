@@ -1,10 +1,28 @@
-<h2>Sign Up</h2>
-<form method="post">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="Username" required><br>
-    <input type="email" name="email" placeholder="Email" required><br>
-    <input type="password" name="password1" placeholder="Password" required><br>
-    <input type="password" name="password2" placeholder="Confirm Password" required><br>
-    <button type="submit">Sign Up</button>
-</form>
-<a href="{% url 'login' %}">Already have an account? Login</a>
+{% include 'header.html' %}
+
+<main class="main pt-5" >
+        
+    
+    
+        <div class="container d-flex justify-content-center">
+            <div class="signup-container">
+                <h3 class="text-center mb-4">Create an Account</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" name="username" class="form-control mb-3" id="username" placeholder="Username" required>
+                    <input type="email" name="email" class="form-control mb-3" id="email" placeholder="Email" required>
+                    <input type="password" name="password1" class="form-control mb-3" id="password" placeholder="Password" required>
+                    <input type="password" name="password2" class="form-control mb-3" id="cpassword" placeholder="Confirm Password" required>
+                    <button type="button" class="btn signup-btn w-100" onclick="signup()">Sign Up</button>
+                    <div class="message" id="message"></div>
+                </form>
+                <div class="text-center mt-3">
+                    <a href="{% url 'signup' %}">Don't have an account? Sign Up</a>
+                </div>
+            </div>
+        </div>
+    
+    
+       
+</main><!-- /.main -->
+{% include 'footer.html' %}
