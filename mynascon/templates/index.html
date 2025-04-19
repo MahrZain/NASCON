@@ -1,6 +1,40 @@
 {% include 'header.html' %}
 <main class="main">
     <style>
+        .partner-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.partner-section h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.partner-section h5 span {
+  color: #0056d2;
+}
+
+.partner-section .logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.partner-section .logo-container img {
+  max-height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.partner-section .logo-container img:hover {
+  transform: scale(1.05);
+}
+
         body {
           margin: 0;
           padding: 0;
@@ -132,6 +166,7 @@
             width: 100%;
             margin: 10px 0;
           }
+
         }
       </style>
     </head>
@@ -154,6 +189,26 @@
           <img src="/mnt/data/32893621-e7d6-4a66-a813-e18f831b4274.png" alt="Student Image" />
         </div>
       </section>
+
+      <section class="partner-section py-5" style="background-color: #f9f9f9;">
+        <div class="container text-center">
+          <h5 class="fw-semibold">
+            We collaborate with 
+            <span style="color: #0056d2;">350+ leading universities and companies</span>
+          </h5>
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 mt-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/University_of_Illinois_logo.svg" alt="Illinois" height="40" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Duke_University_logo.svg" alt="Duke" height="40" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" height="40" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Michigan_Wolverines_logo.svg" alt="Michigan" height="40" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" height="40" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Imperial_College_London_logo.svg" alt="Imperial College" height="40" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Stanford_University_seal_2003.svg" alt="Stanford" height="40" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/UPenn_shield_with_banner.svg" alt="Penn" height="40" />
+          </div>
+        </div>
+      </section>
+      
 </main><!-- /.main -->
 <body>
     
