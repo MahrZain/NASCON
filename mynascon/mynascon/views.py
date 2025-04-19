@@ -3,7 +3,10 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.urls import reverse
+from urllib.parse import urlencode
 from students.models import Student
+from teacher.models import Course, CourseVideo
 
 def signup_view(request):
     if request.session.get('student_id'):
@@ -33,10 +36,9 @@ def signup_view(request):
 
     return render(request, 'signup.html')
 
-
 def login_view(request):
     if request.session.get('student_id'):
-        return redirect('student_home')
+        return redirect('student_home')  # or 'student_home_browse' if you prefer
 
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -45,7 +47,12 @@ def login_view(request):
         try:
             student = Student.objects.get(username=username, password=password)
             request.session['student_id'] = student.id
-            return redirect('student_home')
+
+            # ✅ Redirect with ?page=browse
+            base_url = reverse('student_home')
+            query_string = urlencode({'page': 'browse'})
+            return redirect(f"{base_url}?{query_string}")
+
         except Student.DoesNotExist:
             messages.error(request, "Invalid username or password.")
             return redirect('login')
@@ -82,6 +89,6 @@ def studentHome(request):
     student_id = request.session.get('student_id')
     if not student_id:
         return redirect('login')
-    student = Student.objects.get(id=student_id)
+    student = Course.objects.get(id=student_id)
     page = request.GET.get('page', 'welcome')
     return render(request, 'student/dash.html', {'student': student, 'page': page})

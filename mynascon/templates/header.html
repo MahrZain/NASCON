@@ -21,6 +21,40 @@
             overflow-x: hidden;
           }
       
+          /* Messages styling */
+          .messages-container {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 1100;
+            max-width: 400px;
+            width: 100%;
+          }
+          
+          .alert {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 4s;
+            transform: translateX(120%);
+            opacity: 0;
+          }
+          
+          @keyframes slideIn {
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          
+          @keyframes fadeOut {
+            to {
+              opacity: 0;
+              transform: translateX(120%);
+            }
+          }
+      
           /* HEADER */
           header {
             position: sticky;
@@ -176,18 +210,56 @@
             nav {
               display: none;
             }
+            
+            .messages-container {
+              top: 70px;
+              right: 10px;
+              left: 10px;
+              max-width: none;
+            }
           }
     </style>
 
 </head>
-    <!-- Header -->
 <body>
-
+    <!-- Header -->
     <header>
         <div class="logo">EdTech</div>
         <nav>
           <a href="{% url 'home'%}">Home</a>
-          <a href="">Student Login</a>
-          <a href="">Teacher Login</a>
+          <a href="http://127.0.0.1:8000/login">Student Login</a>
+          <a href="http://127.0.0.1:8000/admin">Teacher Login</a>
         </nav>
-      </header>
+    </header>
+    
+    <!-- Messages -->
+    <div class="messages-container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+    <!-- Rest of your content -->
+    
+    <!-- Bootstrap JS for alert dismissal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Auto-dismiss alerts after 5 seconds
+        document.addEventListener('DOMContentLoaded', function() {
+            var alerts = document.querySelectorAll('.alert');
+            alerts.forEach(function(alert) {
+                setTimeout(function() {
+                    var bsAlert = new bootstrap.Alert(alert);
+                    bsAlert.close();
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
