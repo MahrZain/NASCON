@@ -36,11 +36,3 @@ urlpatterns = [
 
 
 
-
-# urlspatterns :
-
-
-
-urlpatterns = [
-
-]
