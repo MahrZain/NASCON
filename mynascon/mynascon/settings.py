@@ -39,7 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login_signup',
+    'students',
 ]
+
+JAZZMIN_SETTINGS = {
+    "site_title": "My School Admin",
+    "welcome_sign": "Welcome to My School",
+    # … any other global Jazzmin settings …
+}
+
+AUTH_USER_MODEL = 'students.Student'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
