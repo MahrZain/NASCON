@@ -66,10 +66,22 @@ def teacherHome(request):
     return render(request, 'teacher/home.html')
 
 
+
+
+    student = Student.objects.get(id=student_id)
+    return render(request, 'student/dash.html', {'student': student})
+
+def dashboard_view(request):
+    student_id = request.session.get('student_id')
+    student = Student.objects.get(id=student_id)
+    page = request.GET.get('page', 'welcome')  # default is welcome
+    return render(request, 'dash.html', {'student': student, 'page': page})
+
+
 def studentHome(request):
     student_id = request.session.get('student_id')
     if not student_id:
         return redirect('login')
-
     student = Student.objects.get(id=student_id)
-    return render(request, 'student/dash.html', {'student': student})
+    page = request.GET.get('page', 'welcome')
+    return render(request, 'student/dash.html', {'student': student, 'page': page})

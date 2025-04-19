@@ -4,6 +4,7 @@ from django.contrib.auth.hashers import make_password, check_password
 from .models import Student
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
+from teacher.models import Course 
 
 # Custom decorator to protect views
 def student_login_required(view_func):
@@ -72,10 +73,23 @@ def logout_view(request):
 
 
 @student_login_required
-def dashboard_view(request):
+def studentHome(request):
     student_id = request.session.get('student_id')
     student = Student.objects.get(id=student_id)
-    return render(request, 'dash.html', {'student': student})
+    page = request.GET.get('page', 'welcome')
+    course = None
 
+    if page == "detail":
+        course_id = request.GET.get('id')
+        try:
+            course = Course.objects.get(id=course_id)
+        except Course.DoesNotExist:
+            course = None
+
+    return render(request, 'student/dash.html', {
+        'student': student,
+        'page': page,
+        'course': course
+    })
 
 
