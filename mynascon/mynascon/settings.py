@@ -49,6 +49,12 @@ JAZZMIN_SETTINGS = {
 }
 
 # AUTH_USER_MODEL = 'students.Student'
+# Session will last 2 weeks (in seconds)
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 14  # 14 days = 2 weeks
+
+# Optional: Keep session even if browser is closed
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
 
 
 MIDDLEWARE = [
