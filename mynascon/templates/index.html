@@ -1,230 +1,701 @@
 {% include 'header.html' %}
-<main class="main">
-    <style>
-        .partner-section {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-}
+<header>
+    <div class="logo">EdTech</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-.partner-section h5 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #222;
-}
-
-.partner-section h5 span {
-  color: #0056d2;
-}
-
-.partner-section .logo-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.partner-section .logo-container img {
-  max-height: 40px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.partner-section .logo-container img:hover {
-  transform: scale(1.05);
-}
-
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: 'Segoe UI', sans-serif;
-          background: linear-gradient(135deg, #71b7e6, #9b59b6);
-
-          color: white;
-        }
-    
-        .hero-section {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 80px 5%;
-          flex-wrap: wrap;
-          animation: fadeIn 1s ease-in;
-        }
-    
-        .hero-text {
-          flex: 1 1 500px;
-          max-width: 600px;
-        }
-    
-        .hero-text h1 {
-          font-size: 4.2rem;
-          font-weight: 800;
-          margin-bottom: 25px;
-          color: #fff;
-        }
-    
-        .hero-text p {
-          font-size: 1.2rem;
-          color: #e0e0e0;
-          margin-bottom: 35px;
-          line-height: 1.6;
-        }
-    
-        .hero-buttons .btn {
-          padding: 12px 28px;
-          font-size: 1.05rem;
-          font-weight: 600;
-          margin-right: 15px;
-          border-radius: 6px;
-          transition: all 0.3s ease;
-        }
-    
-        .btn-primary {
-          background-color: #f5ba31;
-          border: none;
-          color: #000;
-        }
-    
-        .btn-primary:hover {
-          background-color: #dfa319;
-          transform: translateY(-2px);
-        }
-    
-        .btn-outline-light {
-          border: 2px solid #fff;
-          color: #fff;
-        }
-    
-        .btn-outline-light:hover {
-          background-color: #fff;
-          color: #000;
-          transform: translateY(-2px);
-        }
-    
-        .hero-image {
-          flex: 1 1 400px;
-          position: relative;
-          max-width: 500px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-    
-        .hero-image .circle-letter {
-          font-size: 22rem;
-          color: #ffffff11; /* subtle white overlay */
-          font-weight: 900;
-          position: absolute;
-          z-index: 1;
-          text-align: center;
-        }
-    
-        .hero-image img {
-          max-height: 90%;
-          max-width: 90%;
-          position: relative;
-          z-index: 2;
-          border-radius: 12px;
-        }
-    
-        /* Fade-in animation */
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(40px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-    
-        /* Responsive */
-        @media (max-width: 992px) {
-          .hero-section {
-            flex-direction: column-reverse;
-            text-align: center;
-            padding: 60px 20px;
-          }
-    
-          .hero-text h1 {
-            font-size: 3rem;
-          }
-    
-          .hero-image .circle-letter {
-            font-size: 14rem;
-          }
-        }
-    
-        @media (max-width: 576px) {
-          .hero-text h1 {
-            font-size: 2.5rem;
-          }
-    
-          .hero-text p {
-            font-size: 1rem;
-          }
-    
-          .hero-buttons .btn {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-          }
-
-        }
-      </style>
-    </head>
-    
-    <body>
-    
-      <section class="hero-section">
-        <!-- Text Column -->
-        <div class="hero-text">
-          <h1>Learn without<br>limits</h1>
-          <p>Start, switch, or advance your career with more than 10,000 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
-          <div class="hero-buttons">
-            <button class="btn btn-primary">Join For Free</button>
-            
-            <button class="btn btn-outline-light">Try EdTech for Business</button>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Level Up Your Learning</h1>
+      <p>Welcome to EdTech – where education meets innovation. Explore expert-led online courses enhanced with interactive 3D experiences.</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn-primary">Explore Courses</a>
+        <a href="#" class="btn-secondary">Try a Demo</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/online-learning-5340363-4464431.png" alt="3D Illustration">
+    </div>
+  </section>
+  <!-- FEATURES SECTION -->
+<section class="features-section">
+    <h2 class="section-title">Why Choose EdTech?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src=".\3d-cartoon-portrait-person-practicing-law-related-profession_23-2151419548-removebg-preview.png" alt="Expert Tutors" />
+        <h3>Expert Tutors</h3>
+        <p>Learn from certified instructors with real-world experience in their fields.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://img.icons8.com/3d-fluency/100/online-support.png" alt="Anytime Access" />
+        <h3>Flexible Access</h3>
+        <p>Study anytime, anywhere with 24/7 access on all your devices.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://img.icons8.com/3d-fluency/100/certificate.png" alt="Certificates" />
+        <h3>Verified Certificates</h3>
+        <p>Earn recognized certificates to boost your resume and career.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- POPULAR COURSES SECTION -->
+  <section class="courses-section">
+    <h2 class="section-title">Popular Courses</h2>
+    <div class="courses-grid">
+      <div class="course-card">
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/7a/8047dfbefa4f8d9bc3f2a5de82c1f6/CAD-9-Capstone.jpg?auto=format%2C%20compress%2C%20enhance&dpr=1&w=320&h=180&q=50&fit=crop" alt="Web Dev" />
+        <div class="course-info">
+          <h4>Full Stack Web Development</h4>
+          <p>Master HTML, CSS, JavaScript, and backend development with real-world projects.</p>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/3c/84bda265de49439061521339e23cc5/Data-Modeling-and-Architecture-800x800.png?auto=format%2C%20compress%2C%20enhance&dpr=1&w=320&h=180&fit=crop&q=50" alt="Data Science" />
+        <div class="course-info">
+          <h4>Data Science with Python</h4>
+          <p>Analyze, visualize, and predict using real datasets and machine learning techniques.</p>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/41/46fc7e70d841c9afdbef8ed97c01f1/Designing-UX-UI-Visual-Web-Development.jpg?auto=format%2C%20compress%2C%20enhance&dpr=1&w=320&h=180&fit=crop&q=50" alt="UI/UX" />
+        <div class="course-info">
+          <h4>UI/UX Design Essentials</h4>
+          <p>Learn to create user-friendly interfaces and improve product experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #2c3e50;
+      margin-bottom: 40px;
+      font-weight: 800;
+    }
+  
+    /* FEATURES */
+    .features-section {
+      padding: 80px 40px;
+      background: #f8fbff;
+    }
+  
+    .features-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+    .feature-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+  
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+  
+    .feature-card img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+  
+    .feature-card h3 {
+      font-size: 1.2rem;
+      color: #2d3436;
+      margin-bottom: 10px;
+    }
+  
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #636e72;
+    }
+  
+    /* COURSES */
+    .courses-section {
+      padding: 80px 40px;
+      background: #ffffff;
+    }
+  
+    .courses-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+    .course-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+  
+    .course-card:hover {
+      transform: translateY(-8px);
+    }
+  
+    .course-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+  
+    .course-info {
+      padding: 20px;
+    }
+  
+    .course-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+  
+    .course-info p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+  
+<!-- NEXT-GEN PLATFORM SECTION -->
+<section class="nextgen-section">
+    <div class="nextgen-content">
+      <div class="nextgen-text">
+        <h2>The Future of Learning is Here</h2>
+        <p>EdTech is not just another platform. It’s a next-generation learning hub with AI-powered tools, seamless experiences, and interactive classrooms.</p>
+  
+        <div class="nextgen-features">
+          <div class="feature">
+            <img src="https://threedio-prod-var-cdn.icons8.com/yn/preview_sets/previews/IDYMwq5st5zHUXHI.webp" alt="Live Transcript">
+            <div>
+              <h4>Live Lecture Transcripts</h4>
+              <p>Missed something? Get AI-generated transcripts for every live lecture, instantly.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <img src="https://threedio-prod-var-cdn.icons8.com/rj/preview_sets/previews/aki3JAUc4wYCjvNt.webp" alt="Live Chat">
+            <div>
+              <h4>Peer & Tutor Live Chat</h4>
+              <p>Collaborate in real time with tutors and classmates using in-session chat rooms.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <img src="https://img.icons8.com/3d-fluency/100/lock--v1.png" alt="Secure Payments">
+            <div>
+              <h4>Secure Online Payments</h4>
+              <p>Pay safely for premium courses using end-to-end encrypted payment gateways.</p>
+            </div>
           </div>
         </div>
-    
-        <!-- Image Column -->
-        <div class="hero-image">
-          <img src="/mnt/data/32893621-e7d6-4a66-a813-e18f831b4274.png" alt="Student Image" />
+      </div>
+  
+      <div class="nextgen-image">
+        <!-- <img src="https://img.freepik.com/free-psd/3d-nft-icon-developer-male-illustration_629802-6.jpg?semt=ais_hybrid&w=740" alt="Next Gen Learning"> -->
+        <img src="https://img.freepik.com/free-photo/3d-render-online-education-survey-test-concept_107791-15665.jpg?t=st=1745052941~exp=1745056541~hmac=4365f1d5ef1a319b840c602af09695c37a946543aa0719025f0c7ad326c788ab&w=1380" alt="Next Gen Learning">
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .nextgen-section {
+      background: linear-gradient(to right, #f5f7fb, #ecf0f1);
+      padding: 80px 40px;
+    }
+  
+    .nextgen-content {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      align-items: center;
+    }
+  
+    .nextgen-text {
+      flex: 1;
+      min-width: 320px;
+    }
+  
+    .nextgen-text h2 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+  
+    .nextgen-text p {
+      font-size: 1rem;
+      color: #636e72;
+      margin-bottom: 30px;
+    }
+  
+    .nextgen-features {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+    .feature {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+  
+    .feature:hover {
+      transform: translateY(-6px);
+    }
+  
+    .feature img {
+      width: 60px;
+    }
+  
+    .feature h4 {
+      font-size: 1.2rem;
+      color: #2d3436;
+      margin-bottom: 5px;
+    }
+  
+    .feature p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  
+    .nextgen-image {
+      flex: 1;
+      min-width: 320px;
+      text-align: center;
+    }
+  
+    .nextgen-image img {
+      width: 90%;
+      max-width: 500px;
+      transition: transform 0.4s;
+    }
+  
+    .nextgen-image img:hover {
+      transform: scale(1.03) rotate(1deg);
+    }
+  
+    @media (max-width: 768px) {
+      .nextgen-content {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      .nextgen-text {
+        text-align: center;
+      }
+  
+      .nextgen-text h2 {
+        font-size: 2rem;
+      }
+  
+      .feature {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials-section">
+    <h2 class="section-title">What Our Learners Say</h2>
+    <div class="testimonial-slider-wrapper">
+      <button class="arrow-btn left" onclick="slideTestimonials(-1)">&#10094;</button>
+      <div class="testimonial-slider" id="testimonialSlider">
+        <!-- Slide 1 -->
+        <div class="testimonial-card" style="margin-left: 5px;">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+          <h4>Sarah Khan</h4>
+          <p class="role">Frontend Developer</p>
+          <p>"EdTech helped me transition into tech with ease. The hands-on projects and 3D visuals make a huge difference."</p>
         </div>
-      </section>
-
-      <section class="partner-section py-5" style="background-color: #f9f9f9;">
-        <div class="container text-center">
-          <h5 class="fw-semibold">
-            We collaborate with 
-            <span style="color: #0056d2;">350+ leading universities and companies</span>
-          </h5>
-          <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 mt-4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/University_of_Illinois_logo.svg" alt="Illinois" height="40" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Duke_University_logo.svg" alt="Duke" height="40" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" height="40" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Michigan_Wolverines_logo.svg" alt="Michigan" height="40" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" height="40" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Imperial_College_London_logo.svg" alt="Imperial College" height="40" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Stanford_University_seal_2003.svg" alt="Stanford" height="40" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/UPenn_shield_with_banner.svg" alt="Penn" height="40" />
-          </div>
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="User">
+          <h4>Ahmed Ali</h4>
+          <p class="role">Data Science Student</p>
+          <p>"Real-time transcripts and peer chats make learning more effective and engaging. Highly recommend!"</p>
         </div>
-      </section>
-      
-</main><!-- /.main -->
-<script src="https://js.pusher.com/8.4.0/pusher.min.js"></script>
+        <!-- Slide 2 -->
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="User">
+          <h4>Fatima R.</h4>
+          <p class="role">UX Designer</p>
+          <p>"It feels like a futuristic learning platform. The layout, chat, and support are unmatched."</p>
+        </div>
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/25.jpg" alt="User">
+          <h4>Bilal S.</h4>
+          <p class="role">Marketing Analyst</p>
+          <p>"Secure payments, responsive design, and high-quality courses. This is how e-learning should be!"</p>
+        </div>
+      </div>
+      <button class="arrow-btn right" onclick="slideTestimonials(1)">&#10095;</button>
+    </div>
+  </section>
+  
+  <!-- CSS -->
+  <style>
+    .testimonials-section {
+      background: #f5f7fa;
+      padding: 80px 40px;
+      text-align: center;
+    }
+  
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+      color: #2d3436;
+    }
+  
+    .testimonial-slider-wrapper {
+      position: relative;
+      overflow: hidden;
+      max-width: 1100px;
+      margin: auto;
+    }
+  
+    .testimonial-slider {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+  
+    .testimonial-card {
+      flex: 0 0 50%;
+      padding: 30px;
+      box-sizing: border-box;
+      background: white;
+      border-radius: 12px;
+      margin: 0 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+  
+    .testimonial-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+  
+    .testimonial-card h4 {
+      margin: 5px 0;
+      color: #2c3e50;
+    }
+  
+    .testimonial-card .role {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 15px;
+    }
+  
+    .testimonial-card p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+  
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #6c5ce7;
+      color: white;
+      border: none;
+      font-size: 22px;
+      padding: 12px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      z-index: 10;
+      transition: background 0.3s;
+    }
+  
+    .arrow-btn:hover {
+      background-color: #5b4bd6;
+    }
+  
+    .arrow-btn.left {
+      left: -10px;
+    }
+  
+    .arrow-btn.right {
+      right: -10px;
+    }
+  
+    @media (max-width: 768px) {
+      .testimonial-card {
+        flex: 0 0 100%;
+        margin: 0 10px;
+      }
+  
+      .arrow-btn {
+        top: unset;
+        bottom: -40px;
+      }
+  
+      .arrow-btn.left {
+        left: 35%;
+      }
+  
+      .arrow-btn.right {
+        right: 35%;
+      }
+    }
+  </style>
+  
+  <!-- JS -->
   <script>
-
-    // Enable pusher logging - don't include this in production
-    Pusher.logToConsole = true;
-
-    var pusher = new Pusher('04413b42c5876c94141b', {
-      cluster: 'mt1'
+    let testimonialIndex = 0;
+  
+    function slideTestimonials(direction) {
+      const slider = document.getElementById("testimonialSlider");
+      const totalCards = slider.children.length;
+      const isMobile = window.innerWidth <= 768;
+      const cardsPerView = isMobile ? 1 : 2;
+      const maxIndex = Math.floor(totalCards / cardsPerView) - 1;
+  
+      testimonialIndex += direction;
+      if (testimonialIndex < 0) testimonialIndex = maxIndex;
+      if (testimonialIndex > maxIndex) testimonialIndex = 0;
+  
+      const cardWidth = slider.children[0].offsetWidth + 30; // 30 = margin
+      slider.style.transform = `translateX(-${testimonialIndex * cardWidth * cardsPerView}px)`;
+    }
+  
+    window.addEventListener('resize', () => {
+      testimonialIndex = 0;
+      document.getElementById("testimonialSlider").style.transform = `translateX(0)`;
     });
-
-    var channel = pusher.subscribe('my-channel');
-    channel.bind('my-event', function(data) {
-      alert(JSON.stringify(data));
-    });
+  </script>
+  
+  
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <h2>Ready to Transform Your Future?</h2>
+    <p>Begin your journey with EdTech – Learn Boldly, Grow Globally.</p>
+    <a href="#" class="cta-btn">Get Started Now</a>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <h3>EdTech</h3>
+      <p>&copy; 2025 EdTech. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- STYLES -->
+  <style>
+    .testimonial-slider {
+      /* background: #f8fbff; */
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+      padding-left: 0;
+    }
+  
+    .slider-container {
+      position: relative;
+      max-width: 700px;
+      margin: 40px auto 0;
+      overflow: hidden;
+    }
+  
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+  
+    .slide {
+      min-width: 100%;
+      opacity: 0.5;
+      transition: opacity 0.5s ease;
+      padding: 20px;
+    }
+  
+    .slide.active {
+      opacity: 1;
+    }
+  
+    .slide img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+  
+    .slide h3 {
+      margin: 5px 0;
+      color: #2d3436;
+    }
+  
+    .slide span {
+      font-size: 0.9rem;
+      color: #888;
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    .slide p {
+      font-size: 1rem;
+      color: #444;
+      max-width: 500px;
+      margin: auto;
+    }
+  
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #6c5ce7;
+      color: white;
+      border: none;
+      font-size: 24px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+      transition: background 0.3s;
+    }
+  
+    .nav:hover {
+      background: #5b4bd6;
+    }
+  
+    .left {
+      left: -10px;
+    }
+  
+    .right {
+      right: -10px;
+    }
+  
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(to right, #6c5ce7, #a29bfe);
+      color: white;
+      text-align: center;
+      padding: 80px 40px;
+    }
+  
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+  
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+  
+    .cta-btn {
+      padding: 15px 30px;
+      font-size: 1rem;
+      background-color: white;
+      color: #6c5ce7;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+  
+    .cta-btn:hover {
+      background-color: #f1f2f6;
+    }
+  
+    /* FOOTER */
+    footer {
+      background-color: #2d3436;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+  
+    footer h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    footer p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  
+    @media (max-width: 600px) {
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+  
+      .slide p {
+        padding: 0 10px;
+      }
+  
+      .nav {
+        display: none;
+      }
+    }
+  </style>
+  
+  <!-- JAVASCRIPT -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+        }
+      });
+  
+      document.getElementById("slides").style.transform = `translateX(-${index * 100}%)`;
+    }
+  
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      showSlide(currentSlide);
+    }
+  
+    // Auto-play every 7s
+    setInterval(() => {
+      changeSlide(1);
+    }, 7000);
+  
+    // Initial display
+    showSlide(currentSlide);
   </script>
 <body>
     
