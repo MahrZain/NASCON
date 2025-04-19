@@ -5,6 +5,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 def signup_view(request):
+    if request.user.is_authenticated:
+        return redirect('home')  # Redirect if already logged in
+
     if request.method == 'POST':
         username = request.POST.get('username')
         email = request.POST.get('email')
@@ -20,13 +23,16 @@ def signup_view(request):
             return redirect('signup')
 
         user = User.objects.create_user(username=username, email=email, password=password1)
-        messages.success(request, "Account created. Please log in.")
+        messages.success(request, "Account created successfully. Please log in.")
         return redirect('login')
 
     return render(request, 'signup.html')
 
 
 def login_view(request):
+    if request.user.is_authenticated:
+        return redirect('home')  # Redirect if already logged in
+
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -35,9 +41,9 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect('dashboard')
+            return redirect('home')  # or 'dashboard'
         else:
-            messages.error(request, "Invalid credentials.")
+            messages.error(request, "Invalid username or password.")
             return redirect('login')
 
     return render(request, 'login.html')
@@ -48,8 +54,9 @@ def logout_view(request):
     return redirect('login')
 
 
-# @login_required(login_url='login')
 def home(request):
     return render(request, 'index.html')
+
+
 def teacherHome(request):
     return render(request, 'teacher/home.html')
